@@ -5,6 +5,9 @@ const initialState = {
     login: {
         status: 'INIT'
     },
+    register: {
+        status: 'INIT'
+    },
     status: {
         isLoggedIn: false,
         currentUser: ''
