@@ -4,7 +4,10 @@ import {
     AUTH_LOGIN_FAILURE,
     AUTH_REGISTER,
     AUTH_REGISTER_FAILURE,
-    AUTH_REGISTER_SUCCESS
+    AUTH_REGISTER_SUCCESS,
+    AUTH_GET_STATUS,
+    AUTH_GET_STATUS_SUCCESS,
+    AUTH_GET_STATUS_FAILURE
 } from './ActionTypes';
 import axios from 'axios';
 
@@ -74,5 +77,31 @@ export function registerFailure(error) {
     return {
         type: AUTH_REGISTER_FAILURE,
         error
+    };
+}
+
+/* GET STATUS */
+export function getStatusRequest() {
+    return (dispatch) => {
+        //to be implmented
+    };
+}
+
+export function getStatus() {
+    return {
+        type: AUTH_REGISTER
+    };
+}
+
+export function getStatusSuccess() {
+    return {
+        type: AUTH_REGISTER_SUCCESS,
+        username
+    };
+}
+
+export function getStatusFailure() {
+    return {
+        type: AUTH_GET_STATUS_FAILURE
     };
 }
